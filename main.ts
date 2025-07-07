@@ -5,6 +5,8 @@ const reqService = RequestService.getInstance(
   "https://docs.saddlebagexchange.com"
 );
 
+console.log("Loaded!")
+
 async function main() {
   const payload = {
     server: "Sophia",

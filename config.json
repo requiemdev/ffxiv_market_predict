@@ -1,8 +1,8 @@
 {
-    "data_center": "",
-    "world": "",
-    "time": 168,
-    "sales": 3,
-    "avgPrice": 3000,
-    "filters": []
+  "data_center": "Materia",
+  "world": "Sophia",
+  "time": 168,
+  "sales": 3,
+  "avgPrice": 3000,
+  "filters": [56, 65, 66, 67, 68, 69, 70, 71, 72, 81, 82]
 }

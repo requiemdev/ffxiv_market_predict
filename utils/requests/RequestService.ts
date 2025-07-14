@@ -1,14 +1,11 @@
 import axios, { AxiosInstance, AxiosResponse } from "axios";
 
 export class RequestService {
-  private url: string;
   private static instance: RequestService;
   private axiosInstance: AxiosInstance;
 
-  constructor(url: string) {
-    this.url = url;
+  constructor() {
     this.axiosInstance = axios.create({
-      baseURL: this.url,
       timeout: 10000,
       headers: {
         "Content-Type": "application/json",
@@ -16,9 +13,9 @@ export class RequestService {
     });
   }
 
-  public static getInstance(url: string): RequestService {
+  public static getInstance(): RequestService {
     if (!RequestService.instance) {
-      RequestService.instance = new RequestService(url);
+      RequestService.instance = new RequestService();
     }
     return RequestService.instance;
   }
@@ -62,11 +59,4 @@ export class RequestService {
     return response;
   }
 
-  set baseUrl(url: string) {
-    this.url = url;
-  }
-
-  get baseUrl(): string {
-    return this.url;
-  }
 }

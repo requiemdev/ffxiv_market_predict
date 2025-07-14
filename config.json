@@ -1,4 +1,8 @@
 {
     "data_center": "",
-    "world": ""
+    "world": "",
+    "time": 168,
+    "sales": 3,
+    "avgPrice": 3000,
+    "filters": []
 }

@@ -1,7 +1,7 @@
 import { InvalidInputException } from "../exceptions/InvalidInputException"
 import { RequestService } from "../requests/RequestService";
 
-export async function Marketshare(world: string, time: number, sales: number, avgPrice: number, filters: Array<number>, instance: RequestService): Promise<object> {
+export async function Marketshare(world: string, time: number, sales: number, avgPrice: number, filters: Array<number>): Promise<object> {
     if (!Number.isInteger(time)) {
         throw new InvalidInputException("The time range must be an integer.");
     } else if (!Number.isInteger(sales)) {
@@ -21,8 +21,7 @@ export async function Marketshare(world: string, time: number, sales: number, av
       filters: filters,
       sort_by: "marketValue",
     };
-
-    instance.baseUrl = "https://docs.saddlebagexchange.com";
+    const instance = RequestService.getInstance();
     const response: object = (await instance.post("/api/ffxivmarketshare", payload)).data;
     return response;
 }

@@ -35,4 +35,5 @@ function validateInputs(world: string, time: number, sales: number, avgPrice: nu
 
 export interface MarketshareResponseInterface {
   data: any[];
+  exception: string;
 }

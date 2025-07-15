@@ -12,7 +12,7 @@ import {
 export async function loadTrends(): Promise<void> {
   const file: string = path.resolve(
     import.meta.dirname,
-    "../../data",
+    "../../data/cache",
     "trendCache.json"
   );
 
@@ -25,6 +25,11 @@ export async function loadTrends(): Promise<void> {
     config.filters
   )) as MarketshareResponseInterface;
   const increasing: any[] = [];
+
+  if (response.exception) {
+   console.log("This world does not have any items meeting the config requirements.");
+   return;
+  }
 
   response.data.forEach((entry: any) => {
     if (entry.state == "increasing") {

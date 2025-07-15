@@ -144,3 +144,5 @@ dist
 # End of https://www.toptal.com/developers/gitignore/api/node
 
 trendCache.json
+
+node_modules

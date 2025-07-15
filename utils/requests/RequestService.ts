@@ -1,4 +1,8 @@
 import axios, { AxiosInstance, AxiosResponse } from "axios";
+/**
+ * Request service class to handle all requests in program
+ */
+
 
 export class RequestService {
   private static instance: RequestService;

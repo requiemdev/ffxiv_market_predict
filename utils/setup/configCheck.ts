@@ -18,7 +18,7 @@ export async function configCheck() {
   // If there doesnt exist a cached config, we assume its the first time the program is being run.
   if (!fs.existsSync(cached)) {
     fs.writeFileSync(cached, configContent, "utf-8");
-    loadTrends();
+    await loadTrends();
   }
 
   // The config has changed, so we should update the trends
@@ -29,7 +29,7 @@ export async function configCheck() {
     )
   ) {
     fs.writeFileSync(cached, configContent, "utf-8");
-    loadTrends();
+    await loadTrends();
   }
 }
 

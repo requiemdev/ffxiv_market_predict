@@ -1,6 +1,5 @@
 import fs from "fs";
 import path from "path";
-import config from "../../../config.json";
 import { loadTrends } from "./loadTrends";
 /**
  * Checks if config has changed, update the trends

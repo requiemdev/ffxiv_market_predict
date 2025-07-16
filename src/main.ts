@@ -4,8 +4,6 @@ async function main() {
   console.log("Pre-loading...");
   await configCheck();
   console.log("Pre-load complete!");
-
-
   
 
 }

@@ -12,7 +12,7 @@ import {
 export async function loadTrends(): Promise<void> {
   const file: string = path.resolve(
     import.meta.dirname,
-    "../../data/cache",
+    "../../../data/cache",
     "trendCache.json"
   );
 

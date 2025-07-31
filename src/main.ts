@@ -8,7 +8,7 @@ async function main() {
   await configCheck();
   console.log("Pre-load complete!");
 
-  await saleHistory("35583", "Cactuar", 2628000);
+  saleHistory("46003", "Ravana", 2628000);
   
 
 }
